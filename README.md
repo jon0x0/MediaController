@@ -25,6 +25,7 @@ To install, the following libraries are needed (they can be installed throught h
 
 ## [Adafruit Feather M4 Express](https://www.adafruit.com/product/3857)
 
+## [Featherwing Breakout](https://www.adafruit.com/product/2926)
 
 ## [Adafruit 4W RGBW pixels](https://www.adafruit.com/product/5408)
 
