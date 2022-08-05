@@ -5,7 +5,7 @@ Design and programming by Jon Becker
 This is a media controller to support Thembi Soddell's sound art installation.
 Goals are:
 ###  An external 'outside' button to open the door.
-###  An internal 'user' button to indicate the user is in place and ready to begin, and to abort the experience if the user is uncomfortable continuing the experience.
+###  An internal 'user' button to indicate the user is in place and ready to begin, and to abort the experience if the user is uncomfortable continuing.
 ###  An operator button to assist with aborting the media.
 ###  LEDs on the buttons to indicate functions and status.
 ###  Bright internal RGBW LEDs (here implemented by Adafruit 4W Dotstars) which can be changed to a different color and brightness and controlled as desired.
@@ -76,3 +76,17 @@ See [here](https://docs.google.com/spreadsheets/d/1ZAK95VV2u1BcN2Gdv8SZK7Fb-S8Ox
 | inside button  | 3m  | 4c 18ga  |
 | lights  | 6m  | 3c 18ga  |
 | audio footswitch | 3m | 3c 18ga |
+
+# Operational notes:
+
+When I tried to make an extension cable for the 4W Dotstar chain I couldn't get it working. I tried to build a shorter one which also didn't work. Then I remembered that the Dotstars kind of boost the signal at each stage, so I tried inserting the extension after the first Dotstar, and that worked (with either the 6m or 3m version).  I included both extensions I made. At the moment there are 5 total Dotstars to work with so you could even completely cover up the first one if you want and you still have a decent number to work with.
+
+Probably I could have tried to change the resistor which is in line with the Dotstar data line to increase the drive strength- currently 330 ohm per Adafruit's recommendation of 300-500 ohms (reducing this might have helped). Anyway it takes time to figure those kinds of things out.
+
+The main thing you're going to have to be careful with is to not reverse the 5V and 12V power, that would be disastrous. They are pretty well marked but it would definitely be possible to switch them.
+
+The other thing is that you will still need a MicroSD cable and a USB wall supply to power the processor (Adafruit Feather M4 Express).
+
+I would recommend this powerup order: 5V, then USB power to the processor, then 12V.
+
+The enclosure is designed so you can mount it to a surface and then screw the cover on top of it. Also you can route cables either out of a slot on one edge of the cover or you can route cables through a slot in the base (it may not be possible but it's there if useful).
