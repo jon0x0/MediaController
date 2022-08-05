@@ -15,6 +15,8 @@ Goals are:
 
 The system is implemented with an Adafruit Feather M4 Express microcontroller, and programmed in C using the Arduino IDE.
 It was developed on Arduino IDE 1.8.19.
+The software uses a realtime state machine architecture (where each state finishes very quickly), with a low-level (fast) state machine which controls button LED glow and flash behavior (and only a single 12ms delay for LED persistence), and a high level state machine for button transitions, device actuation etc.
+
 # Libraries:
 To install, the following libraries are needed (they can be installed through the Arduino Library Manager).
 ## 'Sparkfun QWIIC Relay' library
