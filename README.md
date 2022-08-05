@@ -83,7 +83,7 @@ https://robojax.com/learn/arduino/?vid=robojax_BTS7960_motor_driver#google_vigne
 See [here](https://docs.google.com/spreadsheets/d/1ZAK95VV2u1BcN2Gdv8SZK7Fb-S8OxHLf3jOhQMFysT0/edit?usp=sharing)
 
 # Cables needed:
- These cables may be overkill, but the choice was influenced by how long they needed to be, current capacity required (in some cases) and what cable was readily available.
+ These cables may be overkill, but the choice was influenced by how long they needed to be (which makes low resistance desirable), current capacity required (in some cases) and what cable was readily available.
  Cable was purchased from [this](https://www.amazon.com/gp/product/B07Y34F1ZV/) cable family.
  
  | Cable  | Length  | Spec  |
