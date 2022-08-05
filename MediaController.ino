@@ -8,7 +8,7 @@
 #define BEGIN_CLOSING_DOOR_TO_MEDIA_START_SEC 20.0
 
 // Total duration of media play before lights come on in floating point seconds. This should match the media play possibly plus a few seconds.
-#define MEDIA_DURATION_SEC 25.0
+#define MEDIA_DURATION_SEC (12.0*60)
 
 // Brightness of neopixel LEDs, 0-255 (255 is brightest).
 #define NEOPIXEL_MASTER_BRIGHTNESS 255
@@ -194,6 +194,7 @@ enum states
 unsigned long statetimer;
 unsigned long mediatimer;
 unsigned long operatordebouncetimer;
+unsigned long debouncetimer;
 
 void ProcStateMachine()
 {
@@ -258,20 +259,28 @@ void ProcStateMachine()
         SetButtonLEDState(1, B_LEDFLASH_STATE);
         SetButtonLEDState(2, B_LEDONLOW_STATE); // turn on led steady and dim so it isn't a distraction in the dark. May want to dim it further or turn it off altogether (but nice to have a way to find it in the dark).
         statetimer = SetTimer_sec(BEGIN_CLOSING_DOOR_TO_MEDIA_START_SEC);
+        debouncetimer = SetTimer_sec(3.0);
         state++;
       }
       break;
 
     case CLOSE_DOOR_STATE:
       // wait for a time past button release before accepting an abort
+      if (IsTimerFinished(debouncetimer))  // allow an abort with the operator switch during this period after a short debounce period.
+      {
+        if (! ss.digitalRead(SWITCH3))    // Operator switch
+        {
+          Serial.println("Switch 3 pressed");
+          Serial.println("Opening door.");
+          OpenDoor();
+          state = START_STATE;  // this will turn off the audio player and turn on the neopixels.
+        }
+      }
       if (IsTimerFinished(statetimer) == true)
         state++;
       break;
 
-    case PLAYING_MEDIA_STATE:
-      TurnOnAudioPlayer();
-      mediatimer = SetTimer_sec(MEDIA_DURATION_SEC);
-      state++;
+    case PLAYING
       break;
 
     case PLAYING_MEDIA_STATE2:
