@@ -101,6 +101,6 @@ The main thing you're going to have to be careful with is to not reverse the 5V 
 
 The other thing is that you will still need a MicroSD cable and a USB wall supply to power the processor (Adafruit Feather M4 Express).
 
-I would recommend this powerup order: 5V, then USB power to the processor, then 12V.
+I would recommend this powerup order: 5V, then USB power to the processor, then 12V. And the reverse to power down (or all at once with a power strip).
 
 The enclosure is designed so you can mount it to a surface and then screw the cover on top of it. Also you can route cables either out of a slot on one edge of the cover or you can route cables through a slot in the base (it may not be possible but it's there if useful).
