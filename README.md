@@ -26,6 +26,7 @@ To install, the following libraries are needed (they can be installed throught h
 https://www.adafruit.com/product/5408
 
 ## Level shifter
+This is used to shift interface levels from 3.3V of the M4 Express board to the 5V level required by the Dotstar LEDs.
 https://learn.sparkfun.com/tutorials/txb0104-level-shifter-hookup-guide
 
 ## Sparkfun QWIIC / I2C relay module
