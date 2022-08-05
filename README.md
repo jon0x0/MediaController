@@ -74,8 +74,8 @@ See [here](https://docs.google.com/spreadsheets/d/1ZAK95VV2u1BcN2Gdv8SZK7Fb-S8Ox
  
  |   |   |   |
 |---|---|---|
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-
+| outside+operator button  |   |   |
+| motor  |   |   |
+| inside button  |   |   |
+| lights  |   |   |
+| audio footswitch | 3m | 3c 18ga |
