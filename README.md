@@ -62,7 +62,9 @@ dependence is 'Adafruit BUSIO'
 
 ## Linear Actuator
 [Yuelianart 8" Stroke Tracker Actuator Multi Function Linear Electric Actuator 12v Linear Actuator Stroke Speed 10mm/s 900N Load Capacity](https://www.amazon.com/gp/product/B09PYLGBRK/)
-The spec says 2A no load, up to 7A with load. 12V@5A should be sufficient for most uses, but 7A might be needed for the highest loads.
+The spec says 2A no load, up to 7A with load. 12V@5A should be sufficient for most uses, but 7A might be needed for the highest loads. 
+
+Note that this actuator has built in limit switches that will stop it at each end of the actuation.
 
 ## Motor driver:
 [HiLetgo BTS7960](https://www.amazon.com/HiLetgo-BTS7960-Driver-Arduino-Current/dp/B00WSN98DC/)
