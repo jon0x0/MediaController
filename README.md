@@ -41,9 +41,13 @@ the bottom of the button has arrows for + and - on the LED connections.
 
 ## QWIIC/STEMMA Button interface:
 https://www.adafruit.com/product/5296
+This is a button interface as a well as an LED controller for buttons with integrated LEDs.
 driver in library manager is 'adafruit seesaw'
 example in 'LEDArcade_1x4'
 dependence is 'Adafruit BUSIO'
+
+## QWIIC breakout board
+https://www.sparkfun.com/products/16790
 
 ## Linear Actuator
 [Yuelianart 8" Stroke Tracker Actuator Multi Function Linear Electric Actuator 12v Linear Actuator Stroke Speed 10mm/s 900N Load Capacity](https://www.amazon.com/gp/product/B09PYLGBRK/)
