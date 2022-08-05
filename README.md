@@ -23,41 +23,45 @@ To install, the following libraries are needed (they can be installed throught h
 
 # Hardware used:
 
-## Adafruit 4W RGBW pixels
-https://www.adafruit.com/product/5408
+## [Adafruit Feather M4 Express](https://www.adafruit.com/product/3857)
+
+
+## [Adafruit 4W RGBW pixels](https://www.adafruit.com/product/5408)
+
 
 ## Level shifter
-This is used to shift interface levels from 3.3V of the M4 Express board to the 5V level required by the Dotstar LEDs.
-https://learn.sparkfun.com/tutorials/txb0104-level-shifter-hookup-guide
+This [level shifter](https://learn.sparkfun.com/tutorials/txb0104-level-shifter-hookup-guide) is used to shift interface levels from 3.3V of the M4 Express board to the 5V level required by the Dotstar LEDs.
+
 
 ## Sparkfun QWIIC / I2C relay module
-COM-15093
-https://www.sparkfun.com/products/15093
+[COM-15093 relay module](https://www.sparkfun.com/products/15093)
+
 
 Works with Sparkfun QWIIC Relay library  (arduino auto library manager)
 https://learn.sparkfun.com/tutorials/qwiic-single-relay-hookup-guide
 
 ## Buttons:
-https://www.adafruit.com/product/3432
+[Mini Arcade Buttons with integrated LED](https://www.adafruit.com/product/3432)
+
 the bottom of the button has arrows for + and - on the LED connections.
 
-## QWIIC/STEMMA Button interface:
-https://www.adafruit.com/product/5296
+## [QWIIC/STEMMA Button interface](https://www.adafruit.com/product/5296)
+
 This is a button interface as a well as an LED controller for buttons with integrated LEDs.
 driver in library manager is 'adafruit seesaw'
 example in 'LEDArcade_1x4'
 dependence is 'Adafruit BUSIO'
 
-## QWIIC breakout board
-https://www.sparkfun.com/products/16790
+## [QWIIC breakout board](https://www.sparkfun.com/products/16790)
+
 
 ## Linear Actuator
 [Yuelianart 8" Stroke Tracker Actuator Multi Function Linear Electric Actuator 12v Linear Actuator Stroke Speed 10mm/s 900N Load Capacity](https://www.amazon.com/gp/product/B09PYLGBRK/)
 The spec says 2A no load, up to 7A with load. 12V@5A should be sufficient for most uses, but 7A might be needed for the highest loads.
 
 ## Motor driver:
-HiLetgo BTS7960
-https://www.amazon.com/HiLetgo-BTS7960-Driver-Arduino-Current/dp/B00WSN98DC/
+[HiLetgo BTS7960](https://www.amazon.com/HiLetgo-BTS7960-Driver-Arduino-Current/dp/B00WSN98DC/)
+
 
 Some diagrams and code 
 https://www.youtube.com/watch?v=QvXa6GKLu6E
