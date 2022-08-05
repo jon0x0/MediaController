@@ -3,6 +3,7 @@
 Design and programming by Jon Becker
 
 This is a media controller to support Thembi Soddell's sound art installation.
+
 Goals are:
 ###  An external 'outside' button to open the door.
 ###  An internal 'user' button to indicate the user is in place and ready to begin, and to abort the experience if the user is uncomfortable continuing.
