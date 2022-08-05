@@ -4,13 +4,13 @@ Design and programming by Jon Becker
 
 This is a media controller to support Thembi Soddell's sound art installation.
 Goals are:
-  An external 'outside' button to open the door.
-  An internal 'user' button to indicate the user is in place and ready to begin, and to abort the experience if the user is uncomfortable continuing the experience.
-  An operator button to assist with aborting the media.
-  LEDs on the buttons to indicate functions and status.
-  Bright internal RGBW LEDs (here implemented by Adafruit 4W Dotstars) which can be changed to a different color and brightness and controlled as desired.
-  A linear actuator to open and close the door.
-  A relay to control the media (on to reset and play, off to stop playing).
+###  An external 'outside' button to open the door.
+###  An internal 'user' button to indicate the user is in place and ready to begin, and to abort the experience if the user is uncomfortable continuing the experience.
+###  An operator button to assist with aborting the media.
+###  LEDs on the buttons to indicate functions and status.
+###  Bright internal RGBW LEDs (here implemented by Adafruit 4W Dotstars) which can be changed to a different color and brightness and controlled as desired.
+###  A linear actuator to open and close the door.
+###  A relay to control the media (on to reset and play, off to stop playing).
 
 The system is implemented with an Adafruit Feather M4 Express microcontroller, and programmed in C using the Arduino IDE.
 It was developed on Arduino IDE 1.8.19.
