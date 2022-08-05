@@ -71,3 +71,11 @@ See [here](https://docs.google.com/spreadsheets/d/1ZAK95VV2u1BcN2Gdv8SZK7Fb-S8Ox
  inside button  3m    4c 18ga
  lights 6m                  3c 18ga
  audio footswitch cable 3m    3c 18ga
+ 
+ |   |   |   |
+|---|---|---|
+|   |   |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+
