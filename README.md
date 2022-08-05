@@ -27,6 +27,8 @@ To install, the following libraries are needed (they can be installed throught h
 
 ## [Featherwing Breakout](https://www.adafruit.com/product/2926)
 
+## [Short headers](https://www.adafruit.com/product/3002) and [stacking headers](https://www.adafruit.com/product/2830)
+
 ## [Adafruit 4W RGBW pixels](https://www.adafruit.com/product/5408)
 
 
