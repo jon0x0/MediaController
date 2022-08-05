@@ -31,6 +31,7 @@ To install, the following libraries are needed (they can be installed through th
 
 ## [Adafruit 4W RGBW pixels](https://www.adafruit.com/product/5408)
 
+Note that Adafruit recommends a 1000 uF capacitor (watch polarity) across the +5V and GND pins of the dotstars, and a 300-500 ohm resistor in series with the data line. Without this it *will* misbehave.
 
 ## Level shifter
 This [level shifter](https://learn.sparkfun.com/tutorials/txb0104-level-shifter-hookup-guide) is used to shift interface levels from 3.3V of the M4 Express board to the 5V level required by the Dotstar LEDs.
