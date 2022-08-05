@@ -16,7 +16,7 @@ Goals are:
 The system is implemented with an Adafruit Feather M4 Express microcontroller, and programmed in C using the Arduino IDE.
 It was developed on Arduino IDE 1.8.19.
 # Libraries:
-To install, the following libraries are needed (they can be installed throught he Arduino Library Manager).
+To install, the following libraries are needed (they can be installed through the Arduino Library Manager).
 ## 'Sparkfun QWIIC Relay' library
 ## 'Adafruit BUSIO' library
 ## 'Adafruit seesaw' library (for the button controller)
