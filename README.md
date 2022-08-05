@@ -45,6 +45,8 @@ https://learn.sparkfun.com/tutorials/qwiic-single-relay-hookup-guide
 
 the bottom of the button has arrows for + and - on the LED connections.
 
+## [Spade to JST-XH connectors](https://www.adafruit.com/product/1152)
+
 ## [QWIIC/STEMMA Button interface](https://www.adafruit.com/product/5296)
 
 This is a button interface as a well as an LED controller for buttons with integrated LEDs.
@@ -71,6 +73,8 @@ https://create.arduino.cc/projecthub/Fouad_Roboticist/dc-motors-control-using-ar
 
 Another example and library
 https://robojax.com/learn/arduino/?vid=robojax_BTS7960_motor_driver#google_vignette
+
+## Misc JST-SM wire to wire [connectors](https://www.adafruit.com/product/1663) (2,3,4,6 pins)
 
 # Wiring pinout
 See [here](https://docs.google.com/spreadsheets/d/1ZAK95VV2u1BcN2Gdv8SZK7Fb-S8OxHLf3jOhQMFysT0/edit?usp=sharing)
