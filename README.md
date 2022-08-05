@@ -16,9 +16,9 @@ The system is implemented with an Adafruit Feather M4 Express microcontroller, a
 It was developed on Arduino IDE 1.8.19.
 # Libraries:
 To install, the following libraries are needed (they can be installed throught he Arduino Library Manager).
-'Sparkfun QWIIC Relay' library
-'Adafruit BUSIO' library
-'Adafruit seesaw' library
+## 'Sparkfun QWIIC Relay' library
+## 'Adafruit BUSIO' library
+## 'Adafruit seesaw' library (for the button controller)
 
 # Hardware used:
 
