@@ -107,7 +107,7 @@ Probably I could have tried to change the resistor which is in line with the Dot
 
 The main thing you're going to have to be careful with is to not reverse the 5V and 12V power, that would be disastrous. They are pretty well marked but it would definitely be possible to switch them.
 
-The other thing is that you will still need a MicroSD cable and a USB wall supply to power the processor (Adafruit Feather M4 Express).
+The other thing is that you will still need a MicroUSB cable and a USB wall supply to power the processor (Adafruit Feather M4 Express).
 
 I would recommend this powerup order: 5V, then USB power to the processor, then 12V. And the reverse to power down (or all at once with a power strip).
 
