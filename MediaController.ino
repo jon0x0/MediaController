@@ -280,8 +280,11 @@ void ProcStateMachine()
         state++;
       break;
 
-    case PLAYING
-      break;
+    case PLAYING_MEDIA_STATE:
+      TurnOnAudioPlayer();
+      mediatimer = SetTimer_sec(MEDIA_DURATION_SEC);
+      state++;
+    break;
 
     case PLAYING_MEDIA_STATE2:
       if (! ss.digitalRead(SWITCH3))    // Operator switch
