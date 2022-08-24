@@ -10,7 +10,7 @@
 #define DARKNESS_SEC 6.0
 
 #define MEDIA_DURATION_SEC 592.0
-#define END_DELAY_SEC 30.0
+#define END_DELAY_SEC 8.0
 
 
 
@@ -203,17 +203,24 @@ void StateMachine(){
       SetButtonLEDState(1, B_LEDON_STATE);
       SetButtonLEDState(2, B_LEDON_STATE);
       TurnNeopixelsOn();
+      // Initialize timer(s)
+      outsideBounceTime = SetTimer_sec(2.0);
+      userDebounceTime = SetTimer_sec(2.0);
+      Serial.println("Start");
+      
       state++;
     break;
 
     case INACTIVE:
       if (! ss.digitalRead(OUTSIDE_BUTTON) && IsTimerFinished(outsideBounceTime) ){         //open and close door
-        outsideBounceTime = SetTimer_sec(0.5);
+        Serial.println("Outside button pressed");
+        outsideBounceTime = SetTimer_sec(2.0);
         toggleDoor();
       }
       
       if (! ss.digitalRead(USER_BUTTON) && IsTimerFinished(userDebounceTime)){              //start work
-        userDebounceTime = SetTimer_sec(0.5);
+        Serial.println("User button pressed");
+        userDebounceTime = SetTimer_sec(2.0);
         state++;
       }
     break;
@@ -262,14 +269,19 @@ void StateMachine(){
     break;
     
     case END_DELAY:
-      if (IsTimerFinished(endDelay)){ state++; }
+      if (IsTimerFinished(endDelay)){ 
+          TurnNeopixelsOn();
+          endDelay = SetTimer_sec(2.0);
+          state++; 
+      }
     break;
 
     case END_WORK:
+      if (IsTimerFinished(endDelay)){
         workStarted = false;
         OpenDoor();      
-        TurnNeopixelsOn();
         state = START_STATE;
+      }
     break;
     
     case STOP:
@@ -289,9 +301,10 @@ void StateMachine(){
 
 void CheckForUserStop(){
   if (! ss.digitalRead(E_STOP)){
+    Serial.println("Emergency Stop");
     state = STOP;
   }else if (! ss.digitalRead(USER_BUTTON) && IsTimerFinished(userDebounceTime) && workStarted){
-    userDebounceTime = SetTimer_sec(0.5);
+    Serial.println("User Stop");
     state = STOP;
   }
 }
@@ -300,6 +313,7 @@ void TurnAudioOn(){
   if (!audioPlaying){ 
     ToggleAudioPlayer(); 
     audioPlaying = true;
+    Serial.println("Audio on");
   }
 }
 
@@ -335,6 +349,7 @@ void TurnNeopixelsOff(){
     strip1.setPixelColor(i, strip1.Color(0, 0, 0, 0) );       //  Set pixel's color (in RAM)
   strip1.show();
   delay(10);
+  Serial.println("Lights off");
 }
 
 
@@ -343,6 +358,7 @@ void TurnNeopixelsOn(){
   for (int i = 1; i < NEOPIXEL1_COUNT; ++i)
     strip1.setPixelColor(i, strip1.Color(NEOPIXEL_RED, NEOPIXEL_GREEN, NEOPIXEL_BLUE, NEOPIXEL_WHITE) );      
   strip1.show();
+  Serial.println("Lights on");
 //  delay(10);
 }
 
