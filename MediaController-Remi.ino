@@ -6,13 +6,14 @@
 
 
 
-#define START_DELAY_SEC 26.0
-#define DARKNESS_SEC 6.0
+//#define START_DELAY_SEC 26.0 // Delay for door close
+#define START_DELAY_SEC 2.0
+
+#define DARKNESS_SEC 0.5
 
 #define MEDIA_DURATION_SEC 592.0
-#define END_DELAY_SEC 8.0
-
-
+//#define MEDIA_DURATION_SEC 32.0
+#define END_DELAY_SEC 2.0
 
 #define NEOPIXEL_MASTER_BRIGHTNESS 255
 #define NEOPIXEL1_COUNT 5
@@ -231,7 +232,10 @@ void StateMachine(){
       workStarted = true;
       CloseDoor();
       startDelay = SetTimer_sec(START_DELAY_SEC);
+      TurnNeopixelsOff();  // (No door actuator - turn off neopixels as soon as user pushes button)
 
+      userDebounceTime = SetTimer_sec(2.0);
+      
       state++;
       
     break;
@@ -290,6 +294,7 @@ void StateMachine(){
       TurnAudioOff();
       SetButtonLEDState(1, B_LEDOFF_STATE);
       SetButtonLEDState(2, B_LEDOFF_STATE);
+      workStarted = false;
       state = START_STATE;  
     break;
 
@@ -306,6 +311,7 @@ void CheckForUserStop(){
   }else if (! ss.digitalRead(USER_BUTTON) && IsTimerFinished(userDebounceTime) && workStarted){
     Serial.println("User Stop");
     state = STOP;
+    userDebounceTime = SetTimer_sec(2.0);
   }
 }
 
